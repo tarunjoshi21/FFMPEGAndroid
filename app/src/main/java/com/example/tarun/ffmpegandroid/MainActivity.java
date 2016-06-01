@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements FfmpegFinishListe
     public static  String[] trimVideo(String inputFile, String outputFile, String packageName) {
         return new String[] {
                 "/data/data/"+packageName+"/ffmpeg",
-                "-y", "-i", inputFile, "-strict", "experimental", "-s", "160x120", "-r", "25", "-vcodec", "mpeg4", "-b", "150k", "-ab", "48000",
+                "-y", "-i", inputFile, "-strict", "experimental", "-s", "480x360", "-r", "25", "-vcodec", "mpeg4", "-b", "150k", "-ab", "48000",
                 "-ac", "2", "-ar", "22050", outputFile
 
         };

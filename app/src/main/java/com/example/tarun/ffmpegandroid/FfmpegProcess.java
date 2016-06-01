@@ -58,7 +58,7 @@ public class FfmpegProcess extends AsyncTask<String, Void, String> {
             for(int i=0;i<ffmpegCommand.length;i++){
                 System.out.println("Length :-"+ffmpegCommand[i]);
             }
-            Process ffmpegProcess = new ProcessBuilder(  ).redirectErrorStream(true).start();
+            Process ffmpegProcess = new ProcessBuilder(ffmpegCommand).redirectErrorStream(true).start();
             //Process ffmpegProcess = Runtime.getRuntime().exec(ffmpegCommand);
             System.out.println("ffmpegProcess is---"+ffmpegProcess );
             OutputStream ffmpegOutStream = ffmpegProcess.getOutputStream();
